@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# script for fizzbuzz
+
+for ((ki=1; ki<=100; ki++));
+do
+         if ((ki % 3 == 0)) && ((ki % 5 == 0));
+         then
+                  echo "FizzBuzz"
+         elif ((ki % 3 == 0));
+         then
+                  echo "Fizz"
+         elif ((ki % 5 == 0));
+         then
+                  echo "Buzz"
+         else
+                  echo "$ki"
+         fi
+done
