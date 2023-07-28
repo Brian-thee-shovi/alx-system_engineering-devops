@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# my script displays "Best School" 10 times using while
+
+ki=1
+while [[ $ki -le 10 ]]
+do
+        echo "Best School"
+        (( ki += 1))
+done
