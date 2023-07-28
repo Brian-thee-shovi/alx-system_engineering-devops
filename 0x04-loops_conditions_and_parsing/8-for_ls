@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# my script diplays the content oof current dir in a list format showing part of the name after the 1st dash
+
+for my_file in *; # * represents all files
+do
+           if [[ "${my_file:0:1}" != "." ]];
+           then
+                   name="${my_file#*-}"
+                   echo "$name"
+           fi
+done
