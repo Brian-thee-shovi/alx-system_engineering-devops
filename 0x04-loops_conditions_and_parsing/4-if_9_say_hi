@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# my script displays "best school" ten times, with hi on the 9 iteration
+
+ki=1
+while [ $ki -le 10 ];
+do
+        if [ $ki -eq 9 ];
+        then
+                 echo "Best School"
+                 echo "Hi"
+        else
+                 echo "Best School"
+        fi
+        ((ki++))
+done
+    
