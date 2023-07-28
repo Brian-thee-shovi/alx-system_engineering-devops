@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# my script displays num from 1 to 20 with message for certaion iterations
+
+ki=1
+while [ $ki -le 20 ];
+do
+        case $ki in
+                 4)
+                          echo $ki
+                          echo "bad luck from China"
+                          ;;
+                 9)
+                          echo $ki
+                          echo "bad luck from Japan"
+                          ;;
+                 17)
+                          echo $ki
+                          echo "bad luck from Italy"
+                          ;;
+                  *)
+                          echo $ki
+                          ;;
+        esac
+        ((ki++))
+done 
