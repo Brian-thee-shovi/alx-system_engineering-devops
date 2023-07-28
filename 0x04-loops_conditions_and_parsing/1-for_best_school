@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# my script displays best 'school' 10 times
+# my script displays "Best School" 10 times
 
 for ((ri=1; ri<=10; ri++))
 do
-        echo "Best School"
+         echo "Best School"
 done
