@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#script forcefully kills a process innit
+
+pkill -9 -f "7-highlander"
