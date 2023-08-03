@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#shows listenig sockets and shows the PID and name of the
+# program to which each scket belongs
+netstat -tulp
+
+
