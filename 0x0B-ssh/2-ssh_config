@@ -1,0 +1,4 @@
+#ssh to my server with no password
+Host *
+      PasswordAuthentication no
+      IdentityFile ~/.ssh/school
