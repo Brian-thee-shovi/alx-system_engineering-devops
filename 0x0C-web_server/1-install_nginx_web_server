@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Nginx listening on port 80
+#nginx Installation
+sudo apt update
+sudo apt install -y nginx
+
+#defaut nginx folder for pages is created
+sudo mkdir -p /var/www/html
+
+#index.html file
+sudo touch /var/www/html/index
+sudo touch /var/www/html/index.html
+sudo touch /var/www/html/index.htm
+sudo touch /var/www/html/index.nginx-debian.html
+
+#changing ownership
+sudo chown -R "$USER":"$USER" /var/www/html/index
+sudo chown -R "$USER":"$USER" /var/www/html/index.html
+sudo chown -R "$USER":"$USER" /var/www/html/index.htm
+sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+
+#append hello world
+echo "Hello World!" > /var/www/html/index
+echo "Hello World!" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.htm
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+#firewall
+sudo ufw allow 'Nginx HTTP'
+
+#start Nginx server
+sudo service nginx restart
