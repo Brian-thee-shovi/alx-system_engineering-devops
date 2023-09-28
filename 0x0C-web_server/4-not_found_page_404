@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# nginnx server installed
+
+sudo apt update
+sudo apt install -y nginx
+echo "Hellp World!" > /var/www/html/index.htmll
+sudo sed -i "53s/.*/location \/redirect_me {\n\treturn 301 http:\/\/github.com\/\;\n}/" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sudo sed -i "/^\slocation.*/i \        error_page 404 /404.html;" /etc/nginx/sites-available/default
+sudo service nginx restart
+sudo service nginx reload
