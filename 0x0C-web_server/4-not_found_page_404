@@ -54,3 +54,11 @@ server {
   }
 }
 EOF
+
+# Create a symlink to enable the site if it doesn't exist
+if [ ! -L /etc/nginx/sites-enabled/default ]; then
+    ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+fi
+
+# Restart Nginx service
+service nginx restart
