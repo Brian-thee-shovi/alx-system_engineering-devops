@@ -1,5 +1,10 @@
 #!/usr/bin/ennv bash
 #configs the web server
 
-sudo sed -i 's/sites-enabled/sites-available/' /etc/nginx/nginx.conf
-sudo service nginx restart
+#stops any process listening on port 80
+sudo fuser -k 80/tcp
+
+cd /etc/nginx/sites-enabled/ || exit;
+rm default
+ln -s /etc/nginx/sites-available/default default;
+service nginx restart
