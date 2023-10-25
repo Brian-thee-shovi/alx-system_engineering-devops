@@ -6,7 +6,7 @@ import json
 import requests
 import sys
 
-#endpoint urls
+# endpoint urls
 apiurl = 'https://jsonplaceholder.typicode.com/'
 usersurl = apiurl + 'users'
 todosurl = apiurl + 'todos'
@@ -14,7 +14,7 @@ todosurl = apiurl + 'todos'
 
 if __name__ == "__main__":
 
-    #requests user data
+    # requests user data
     users = requests.get(usersurl).json()
 
     with open("todo_all_employees.json", 'w') as jsonf:

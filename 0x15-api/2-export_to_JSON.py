@@ -15,7 +15,7 @@ if __name__ == "__main__":
         userurl = apiurl + 'users/{}'.format(userid)
         user_todos = apiurl + 'users/{}/todos'.format(userid)
 
-        #request data
+        # request data
         user = requests.get(userurl).json()
         todos = requests.get(user_todos).json()
 
