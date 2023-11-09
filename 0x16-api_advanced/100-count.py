@@ -17,7 +17,7 @@ def count_words(subreddit, word_list, count_list=[], page_2=None):
 
     headers = {'User-Agent': 'Shovi'}
 
-    res = resquests.get(url, headers=headers, allow_redirects=False)
+    res = requests.get(url, headers=headers, allow_redirects=False)
 
     if res.status_code != 200:
         return
@@ -43,6 +43,6 @@ def count_words(subreddit, word_list, count_list=[], page_2=None):
     keywords = 0
     for word in sorted_list:
         if word['count'] > 0:
-            print('{}: {}'.format(word['keyword'], word['count]))
+            print('{}: {}'.format(word['keyword'], word['count']))
             keywords += 1
     return
