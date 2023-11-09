@@ -11,7 +11,7 @@ def number_of_subscribers(subreddit):
     # it identifies source of the HTTP request to the Reddit servers
 
     my_headers = {'User-Agent': 'Shovi'}
-    resq = requests.get(url, my_headers=headers)
+    resq = requests.get(url, headers=my_headers)
 
     if resq.status_code == 200:
         data = resq.json()
